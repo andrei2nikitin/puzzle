@@ -10,69 +10,71 @@
 }
 
 html {
+    overflow-x: hidden;
+    width: 100vw;
     height: 100%;
 }
 
 body {
-    font-family: Tahoma, sans-serif;
-    background: url(../images/crosshatch.png);
-    height: 100%;
     min-height: 100% !important;
+    height: 100%;
+    background: url(../images/crosshatch.png);
+    font-family: Tahoma, sans-serif;
 }
 
 .main {
-    max-width: 1000px;
-    width: 1000px;
+    position: relative;
     margin: 0 auto;
     padding-bottom: 100px;
-    position: relative;
+    max-width: 1000px;
+    width: 1000px;
 }
 
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
     left: 0;
+    width: 100%;
     height: 40px;
     background: url(../images/bg.png);
 }
 
 .column {
     &__left {
-        width: 200px;
         float: left;
+        width: 200px;
     }
 
     &__center {
-        width: 750px;
         float: left;
         margin-bottom: 50px;
+        width: 750px;
     }
 }
 
 .top-menu {
-    width: 100%;
-    min-width: 1000px;
-    background: url(../images/bg.png);
     position: relative;
     z-index: 30;
+    min-width: 1000px;
+    width: 100%;
+    background: url(../images/bg.png);
 
     &__wrap {
-        width: 1000px;
         margin: 0 auto;
         padding: 5px 0;
+        width: 1000px;
     }
 
     &__logo {
+        display: inline-block;
+        margin: 0 auto;
         padding: 20px 20px 20px 100px;
-        font-size: 25px;
-        font-weight: bold;
         background: url(../images/bones.png) no-repeat 30px center;
         background-size: 50px;
-        margin: 0 auto;
         color: #fff;
-        display: inline-block;
         text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
 
         &__link {
             text-decoration: none;
@@ -82,34 +84,34 @@ body {
 
 .menu {
     &__wrap {
+        position: relative;
         margin: 20px 20px 0 0;
         padding: 0;
-        position: relative;
 
         &__bg {
             position: relative;
 
             &:before {
-                content: '';
                 position: absolute;
-                width: 250px;
-                height: 250px;
-                border: 1px solid #949494;
-                display: inline-block;
-                transform: rotate(30deg);
-                background: #fff;
                 top: -47px;
                 left: -50px;
                 z-index: -1;
+                display: inline-block;
+                width: 250px;
+                height: 250px;
+                border: 1px solid #949494;
+                background: #fff;
                 box-shadow: 0 0 0 9px #d8d8d8;
+                content: '';
+                transform: rotate(30deg);
             }
         }
     }
 
     &__item {
+        margin: 0 0 10px 0;
         list-style: none;
         font-size: 14px;
-        margin: 0 0 10px 0;
 
         a {
             color: #000011;
@@ -130,14 +132,14 @@ body {
 
     &__item {
         a, p {
-            color: #fff;
-            font-size: 12px;
-            text-decoration: none;
-            background: #164a91;
-            border-radius: 5px;
-            padding: 2px 10px 4px;
             display: inline-block;
             margin: 0;
+            padding: 2px 10px 4px;
+            border-radius: 5px;
+            background: #164a91;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
 
             &:hover {
                 text-decoration: underline;
@@ -145,58 +147,58 @@ body {
         }
 
         p {
-            background: #628ECA;
-            border: 1px solid #507BB5;
             margin: 0 0 0 5px;
+            border: 1px solid #507BB5;
+            background: #628ECA;
 
             &:hover {
-                cursor: default;
                 text-decoration: none;
+                cursor: default;
             }
         }
     }
 }
 
 #___gcse_0 {
-    width: 350px;
     position: absolute;
-    right: 0;
     top: 12px;
+    right: 0;
+    width: 350px;
 }
 
 .gsc-control-cse {
-    background: none !important;
     border: none !important;
+    background: none !important;
 }
 
 .puzzle {
     &__item {
-        border: 1px solid #D8D8D8   ;
-        border-radius: 5px;
-        padding: 20px 30px;
+        position: relative;
         margin: 0 0 5px;
+        padding: 20px 30px;
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
         background: #fff;
         color: #4f4f4f;
-        position: relative;
 
         &.active {
             z-index: 20;
         }
 
         &__title {
-            font-size: 20px;
-            border-bottom: 1px solid #4f4f4f;
             padding: 0 0 3px 0;
+            border-bottom: 1px solid #4f4f4f;
+            font-size: 20px;
         }
         &__breadcrumbs {
             &__item {
-                font-size: 10px;
                 color: #515158;
                 font-style: italic;
+                font-size: 10px;
 
                 a {
-                    text-decoration: none;
                     color: #515158;
+                    text-decoration: none;
                     font-style: italic;
 
                     &:hover {
@@ -207,26 +209,26 @@ body {
         }
 
         &__text {
-            font-size: 14px;
             margin: 10px 0 20px;
+            font-size: 14px;
         }
 
         @bgTop: #e4e4e4;
         @bgBottom: #c1c1c1;
         &__button {
-            cursor: pointer;
             float: right;
-            font-size: 14px;
-            background-image: linear-gradient(to bottom, @bgTop, @bgBottom);
             padding: 2px 10px 4px;
+            border: 1px solid #909090;
             border-radius: 3px;
+            background-image: linear-gradient(to bottom, @bgTop, @bgBottom);
             color: #4f4f4f;
             text-shadow: 0 1px 2px #fff;
-            border: 1px solid #909090;
+            font-size: 14px;
+            cursor: pointer;
 
             &:hover {
-                background-image: linear-gradient(to bottom, lighten(@bgTop, 5%), lighten(@bgBottom, 5%));
                 border: 1px solid lighten(#909090, 5%);
+                background-image: linear-gradient(to bottom, lighten(@bgTop, 5%), lighten(@bgBottom, 5%));
             }
 
             &:active {
@@ -245,15 +247,15 @@ body {
                 display: none;
             }
             &__item {
-                font-size: 14px;
                 margin: 10px 0 0;
                 padding: 10px 0 0;
                 color: #4f4f4f;
+                font-size: 14px;
 
                 p {
-                    font-weight: bold;
                     display: inline-block;
                     margin: 0;
+                    font-weight: bold;
                 }
             }
         }
@@ -261,28 +263,28 @@ body {
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-
     display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
     margin-right: .2em;
+    margin-left: .2em;
+    width: 1em;
+
     text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    font-weight: normal;
+    font-style: normal;
     /* opacity: .8; */
 
     /* For safety - reset parent styles, that can break glyph codes*/
     font-variant: normal;
-    text-transform: none;
+    font-family: "fontello";
 
     /* fix buttons height, for twitter bootstrap */
     line-height: 1em;
 
     /* Animation center compensation - margins should be symmetric */
     /* remove if not needed */
-    margin-left: .2em;
+    speak: none;
 
     /* you can be more comfortable with increased icons size */
     /* font-size: 120%; */
@@ -295,32 +297,38 @@ body {
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-star:before { content: '\e804'; } /* '?' */
-.icon-star-empty:before { content: '\e805'; } /* '?' */
+.icon-star:before {
+    content: '\e804';
+}
+
+/* '?' */
+.icon-star-empty:before {
+    content: '\e805';
+}
+
+/* '?' */
 
 .hidden {
     visibility: hidden;
 }
 
-
 .overlay {
-    display: none;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    background: #000;
+    left: 0;
     z-index: 10;
+    display: none;
+    background: #000;
     opacity: .6;
 }
 
 .tf-banner {
-    text-align: center;
-    background: #fff;
     height: 270px;
+    background: #fff;
+    text-align: center;
 }
-
 
 .paginator {
     &__wrap {
@@ -332,18 +340,18 @@ body {
         margin: 3px;
 
         a, p {
-            color: #fff;
-            font-size: 12px;
-            text-decoration: none;
-            background: #164a91;
-            border-radius: 5px;
-            padding: 2px 10px 4px;
             display: inline-block;
+            padding: 2px 10px 4px;
+            border-radius: 5px;
+            background: #164a91;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
         }
 
         p {
-            background: #628ECA;
             border: 1px solid #507BB5;
+            background: #628ECA;
         }
     }
 }
