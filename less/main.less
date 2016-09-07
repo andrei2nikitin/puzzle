@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?62291455');
+    src: url('../fonts/fontello.eot?62291455#iefix') format('embedded-opentype'),
+    url('../fonts/fontello.woff?62291455') format('woff'),
+    url('../fonts/fontello.ttf?62291455') format('truetype'),
+    url('../fonts/fontello.svg?62291455#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    background: url(../images/crosshatch.png);
+    height: 100%;
+    min-height: 100% !important;
+}
+
+.main {
+    max-width: 1000px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 40px;
+    background: url(../images/bg.png);
+}
+
+.column {
+    &__left {
+        width: 200px;
+        float: left;
+    }
+
+    &__center {
+        width: 750px;
+        float: left;
+        margin-bottom: 50px;
+    }
+}
+
+.top-menu {
+    width: 100%;
+    min-width: 1000px;
+    background: url(../images/bg.png);
+    position: relative;
+    z-index: 30;
+
+    &__wrap {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 5px 0;
+    }
+
+    &__logo {
+        padding: 20px 20px 20px 100px;
+        font-size: 25px;
+        font-weight: bold;
+        background: url(../images/bones.png) no-repeat 30px center;
+        background-size: 50px;
+        margin: 0 auto;
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu {
+    &__wrap {
+        margin: 20px 20px 0 0;
+        padding: 0;
+        position: relative;
+
+        &__bg {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                border: 1px solid #949494;
+                display: inline-block;
+                transform: rotate(30deg);
+                background: #fff;
+                top: -47px;
+                left: -50px;
+                z-index: -1;
+                box-shadow: 0 0 0 9px #d8d8d8;
+            }
+        }
+    }
+
+    &__item {
+        list-style: none;
+        font-size: 14px;
+        margin: 0 0 10px 0;
+
+        a {
+            color: #000011;
+        }
+
+        &:hover {
+            list-style: circle;
+        }
+
+        &.active {
+            list-style: circle;
+        }
+    }
+}
+
+.breadcrumbs {
+    margin: 9px 0 10px 35px;
+
+    &__item {
+        a, p {
+            color: #fff;
+            font-size: 12px;
+            text-decoration: none;
+            background: #164a91;
+            border-radius: 5px;
+            padding: 2px 10px 4px;
+            display: inline-block;
+            margin: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            background: #628ECA;
+            border: 1px solid #507BB5;
+            margin: 0 0 0 5px;
+
+            &:hover {
+                cursor: default;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#___gcse_0 {
+    width: 350px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.gsc-control-cse {
+    background: none !important;
+    border: none !important;
+}
+
+.puzzle {
+    &__item {
+        border: 1px solid #D8D8D8   ;
+        border-radius: 5px;
+        padding: 20px 30px;
+        margin: 0 0 5px;
+        background: #fff;
+        color: #4f4f4f;
+        position: relative;
+
+        &.active {
+            z-index: 20;
+        }
+
+        &__title {
+            font-size: 20px;
+            border-bottom: 1px solid #4f4f4f;
+            padding: 0 0 3px 0;
+        }
+        &__breadcrumbs {
+            &__item {
+                font-size: 10px;
+                color: #515158;
+                font-style: italic;
+
+                a {
+                    text-decoration: none;
+                    color: #515158;
+                    font-style: italic;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            margin: 10px 0 20px;
+        }
+
+        @bgTop: #e4e4e4;
+        @bgBottom: #c1c1c1;
+        &__button {
+            cursor: pointer;
+            float: right;
+            font-size: 14px;
+            background-image: linear-gradient(to bottom, @bgTop, @bgBottom);
+            padding: 2px 10px 4px;
+            border-radius: 3px;
+            color: #4f4f4f;
+            text-shadow: 0 1px 2px #fff;
+            border: 1px solid #909090;
+
+            &:hover {
+                background-image: linear-gradient(to bottom, lighten(@bgTop, 5%), lighten(@bgBottom, 5%));
+                border: 1px solid lighten(#909090, 5%);
+            }
+
+            &:active {
+                background-image: linear-gradient(to bottom, darken(@bgTop, 5%), darken(@bgBottom, 5%));
+            }
+        }
+        &__control {
+
+        }
+        &__star {
+            display: inline-block;
+        }
+
+        &__answer {
+            &__wrap {
+                display: none;
+            }
+            &__item {
+                font-size: 14px;
+                margin: 10px 0 0;
+                padding: 10px 0 0;
+                color: #4f4f4f;
+
+                p {
+                    font-weight: bold;
+                    display: inline-block;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-star:before { content: '\e804'; } /* '?' */
+.icon-star-empty:before { content: '\e805'; } /* '?' */
+
+.hidden {
+    visibility: hidden;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 10;
+    opacity: .6;
+}
+
+.tf-banner {
+    text-align: center;
+    background: #fff;
+    height: 270px;
+}
+
+
+.paginator {
+    &__wrap {
+        text-align: center;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 3px;
+
+        a, p {
+            color: #fff;
+            font-size: 12px;
+            text-decoration: none;
+            background: #164a91;
+            border-radius: 5px;
+            padding: 2px 10px 4px;
+            display: inline-block;
+        }
+
+        p {
+            background: #628ECA;
+            border: 1px solid #507BB5;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "grunt",
+    "version": "0.0.0",
+    "authors": [
+        "a.nikitin <a.nikitin@topface.com>"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules"
+    ],
+    "dependencies": {
+        "jquery": "~2.1.4"
+    }
+}
